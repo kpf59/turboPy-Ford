@@ -1,0 +1,16 @@
+maxFib = int(input("What is the highest number you want the Fibonacci sequence to approach?\n"))
+
+if maxFib < 1:
+    maxFib = int(input("Please enter a number greater than or equal to 1\n"))
+
+a = 0
+b = 1
+fibbseq = [a,b]
+
+while a + b <= maxFib:
+    hold = a
+    a = b
+    b = a + hold
+    fibbseq.append(b)
+
+print(fibbseq)
